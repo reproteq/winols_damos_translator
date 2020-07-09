@@ -21,8 +21,10 @@ with open(path, 'r+') as f:
             lines[i] = text + '\n'
 
         if operator.contains(text, '"'):
-
-            text = translate(text, src='de', dest='es').text
+            text = translate(text, src='en', dest='es').text
+           #text = translate(text, src='de', dest='es').text
+	   #text = translate(text, src='de', dest='en').text	
+	
             lines[i] = text + '\n'			
 
 
