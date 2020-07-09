@@ -7,7 +7,7 @@ print(" Winols Damos Translator by Reproteq  2020-07-09 ".center(83, "#"))
 print("Path to file.a2l")
 path = input(">").replace('/', r'\'')
 
-with open(path, 'r+') as f:
+with open(path, 'r+' ,encoding='latin1') as f:
          
     translate = Translator().translate       
     lines = f.readlines()
@@ -23,7 +23,7 @@ with open(path, 'r+') as f:
         if operator.contains(text, '"'):
             text = translate(text, src='en', dest='es').text
            #text = translate(text, src='de', dest='es').text
-	       #text = translate(text, src='de', dest='en').text	
+	   #text = translate(text, src='de', dest='en').text	
 	
             lines[i] = text + '\n'			
 
