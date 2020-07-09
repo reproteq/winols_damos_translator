@@ -23,7 +23,7 @@ with open(path, 'r+') as f:
         if operator.contains(text, '"'):
             text = translate(text, src='en', dest='es').text
            #text = translate(text, src='de', dest='es').text
-	   #text = translate(text, src='de', dest='en').text	
+	       #text = translate(text, src='de', dest='en').text	
 	
             lines[i] = text + '\n'			
 
@@ -31,4 +31,3 @@ with open(path, 'r+') as f:
         print(lines[i])
 
     f.writelines(lines)
-
